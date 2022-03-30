@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465F92763E73E12AB5CC7A0E /* Pods_ADVA_Photos_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4CD92916E2B509E2FFF0C7 /* Pods_ADVA_Photos_Task.framework */; };
 		DC5AFAF927F2373000C72869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFAF827F2373000C72869 /* AppDelegate.swift */; };
 		DC5AFB0227F2373200C72869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5AFB0127F2373200C72869 /* Assets.xcassets */; };
 		DC5AFB0527F2373200C72869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5AFB0327F2373200C72869 /* LaunchScreen.storyboard */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B4CD92916E2B509E2FFF0C7 /* Pods_ADVA_Photos_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADVA_Photos_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6764532FA3C1CD05630D51F5 /* Pods-ADVA Photos Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADVA Photos Task.debug.xcconfig"; path = "Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task.debug.xcconfig"; sourceTree = "<group>"; };
 		DC5AFAF527F2373000C72869 /* ADVA Photos Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADVA Photos Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5AFAF827F2373000C72869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC5AFB0127F2373200C72869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		DC5AFB5327F27EEE00C72869 /* UIApplication+UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+UIHelpers.swift"; sourceTree = "<group>"; };
 		DC5AFB5527F27F3E00C72869 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		DC5AFB5827F2813600C72869 /* Optional+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Helpers.swift"; sourceTree = "<group>"; };
+		F6570ECC2B492219FFAD1006 /* Pods-ADVA Photos Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADVA Photos Task.release.xcconfig"; path = "Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,17 +79,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465F92763E73E12AB5CC7A0E /* Pods_ADVA_Photos_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143E39A7000B19AC9A765BA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B4CD92916E2B509E2FFF0C7 /* Pods_ADVA_Photos_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4AE614A3F51E122A7C76E621 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6764532FA3C1CD05630D51F5 /* Pods-ADVA Photos Task.debug.xcconfig */,
+				F6570ECC2B492219FFAD1006 /* Pods-ADVA Photos Task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DC5AFAEC27F2373000C72869 = {
 			isa = PBXGroup;
 			children = (
 				DC5AFAF727F2373000C72869 /* ADVA Photos Task */,
 				DC5AFAF627F2373000C72869 /* Products */,
+				4AE614A3F51E122A7C76E621 /* Pods */,
+				143E39A7000B19AC9A765BA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,6 +364,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC5AFB0927F2373200C72869 /* Build configuration list for PBXNativeTarget "ADVA Photos Task" */;
 			buildPhases = (
+				C7FD337F05E2A16C1292840E /* [CP] Check Pods Manifest.lock */,
+				DC8A9D6727F4A19F000048E3 /* Run SwiftLint */,
 				DC5AFAF127F2373000C72869 /* Sources */,
 				DC5AFAF227F2373000C72869 /* Frameworks */,
 				DC5AFAF327F2373000C72869 /* Resources */,
@@ -397,6 +423,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7FD337F05E2A16C1292840E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ADVA Photos Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC8A9D6727F4A19F000048E3 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC5AFAF127F2373000C72869 /* Sources */ = {
@@ -564,6 +633,7 @@
 		};
 		DC5AFB0A27F2373200C72869 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6764532FA3C1CD05630D51F5 /* Pods-ADVA Photos Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -595,6 +665,7 @@
 		};
 		DC5AFB0B27F2373200C72869 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6570ECC2B492219FFAD1006 /* Pods-ADVA Photos Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
