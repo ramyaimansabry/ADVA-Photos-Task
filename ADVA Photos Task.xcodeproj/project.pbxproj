@@ -36,6 +36,14 @@
 		DC5AFB5427F27EEE00C72869 /* UIApplication+UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB5327F27EEE00C72869 /* UIApplication+UIHelpers.swift */; };
 		DC5AFB5627F27F3E00C72869 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB5527F27F3E00C72869 /* AlertItem.swift */; };
 		DC5AFB5927F2813600C72869 /* Optional+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB5827F2813600C72869 /* Optional+Helpers.swift */; };
+		DC8A9D8727F4A78E000048E3 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D7327F4A78E000048E3 /* HomeRepository.swift */; };
+		DC8A9D8827F4A78E000048E3 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D7527F4A78E000048E3 /* HomeService.swift */; };
+		DC8A9D8927F4A78E000048E3 /* HomeViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D7A27F4A78E000048E3 /* HomeViewModelContract.swift */; };
+		DC8A9D8A27F4A78E000048E3 /* HomeRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D7C27F4A78E000048E3 /* HomeRepositoryContract.swift */; };
+		DC8A9D8B27F4A78E000048E3 /* HomeServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D7F27F4A78E000048E3 /* HomeServiceContract.swift */; };
+		DC8A9D8C27F4A78E000048E3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D8227F4A78E000048E3 /* HomeViewModel.swift */; };
+		DC8A9D9927F4A8EB000048E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D9727F4A8EB000048E3 /* HomeViewController.swift */; };
+		DC8A9D9A27F4A8EB000048E3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8A9D9827F4A8EB000048E3 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +79,14 @@
 		DC5AFB5327F27EEE00C72869 /* UIApplication+UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+UIHelpers.swift"; sourceTree = "<group>"; };
 		DC5AFB5527F27F3E00C72869 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		DC5AFB5827F2813600C72869 /* Optional+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Helpers.swift"; sourceTree = "<group>"; };
+		DC8A9D7327F4A78E000048E3 /* HomeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		DC8A9D7527F4A78E000048E3 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		DC8A9D7A27F4A78E000048E3 /* HomeViewModelContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelContract.swift; sourceTree = "<group>"; };
+		DC8A9D7C27F4A78E000048E3 /* HomeRepositoryContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepositoryContract.swift; sourceTree = "<group>"; };
+		DC8A9D7F27F4A78E000048E3 /* HomeServiceContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServiceContract.swift; sourceTree = "<group>"; };
+		DC8A9D8227F4A78E000048E3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DC8A9D9727F4A8EB000048E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DC8A9D9827F4A8EB000048E3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		F6570ECC2B492219FFAD1006 /* Pods-ADVA Photos Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADVA Photos Task.release.xcconfig"; path = "Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +140,7 @@
 		DC5AFAF727F2373000C72869 /* ADVA Photos Task */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9D7027F4A78E000048E3 /* Home Screen */,
 				DC5AFB0F27F23CBA00C72869 /* Utilities */,
 				DC5AFB0C27F23B8A00C72869 /* Resources */,
 				DC5AFB0E27F23BAD00C72869 /* Configurations */,
@@ -357,6 +374,125 @@
 			path = Optional;
 			sourceTree = "<group>";
 		};
+		DC8A9D7027F4A78E000048E3 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7127F4A78E000048E3 /* Data */,
+				DC8A9D7627F4A78E000048E3 /* Domain */,
+				DC8A9D8027F4A78E000048E3 /* Presentation */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		DC8A9D7127F4A78E000048E3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7427F4A78E000048E3 /* Service */,
+				DC8A9D7227F4A78E000048E3 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DC8A9D7227F4A78E000048E3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7327F4A78E000048E3 /* HomeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DC8A9D7427F4A78E000048E3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7527F4A78E000048E3 /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DC8A9D7627F4A78E000048E3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7727F4A78E000048E3 /* Use Cases */,
+				DC8A9D7827F4A78E000048E3 /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DC8A9D7727F4A78E000048E3 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		DC8A9D7827F4A78E000048E3 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7927F4A78E000048E3 /* ViewModel */,
+				DC8A9D7B27F4A78E000048E3 /* Repository */,
+				DC8A9D7D27F4A78E000048E3 /* Use Cases */,
+				DC8A9D7E27F4A78E000048E3 /* Services */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		DC8A9D7927F4A78E000048E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7A27F4A78E000048E3 /* HomeViewModelContract.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC8A9D7B27F4A78E000048E3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7C27F4A78E000048E3 /* HomeRepositoryContract.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DC8A9D7D27F4A78E000048E3 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		DC8A9D7E27F4A78E000048E3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7F27F4A78E000048E3 /* HomeServiceContract.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DC8A9D8027F4A78E000048E3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D8127F4A78E000048E3 /* ViewModel */,
+				DC8A9D8527F4A78E000048E3 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC8A9D8127F4A78E000048E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D8227F4A78E000048E3 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC8A9D8527F4A78E000048E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D9727F4A8EB000048E3 /* HomeViewController.swift */,
+				DC8A9D9827F4A8EB000048E3 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,6 +555,7 @@
 			files = (
 				DC5AFB0527F2373200C72869 /* LaunchScreen.storyboard in Resources */,
 				DC5AFB0227F2373200C72869 /* Assets.xcassets in Resources */,
+				DC8A9D9A27F4A8EB000048E3 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,19 +612,24 @@
 				DC5AFB2F27F275C300C72869 /* ErrorType+Message.swift in Sources */,
 				DC5AFB1C27F2474900C72869 /* String+Helpers.swift in Sources */,
 				DC5AFB4D27F27D6E00C72869 /* APIConstants.swift in Sources */,
+				DC8A9D8C27F4A78E000048E3 /* HomeViewModel.swift in Sources */,
 				DC5AFB3E27F27B2E00C72869 /* ViewModelState.swift in Sources */,
 				DC5AFB3627F277ED00C72869 /* ErrorConstants.swift in Sources */,
 				DC5AFB4727F27C5400C72869 /* NetworkParameters.swift in Sources */,
 				DC5AFB5927F2813600C72869 /* Optional+Helpers.swift in Sources */,
+				DC8A9D8727F4A78E000048E3 /* HomeRepository.swift in Sources */,
 				DC5AFB3227F2764200C72869 /* ErrorResolver.swift in Sources */,
 				DC5AFB2227F259B500C72869 /* APIService.swift in Sources */,
 				DC5AFB3C27F27B0E00C72869 /* BaseViewModel.swift in Sources */,
 				DC5AFB1527F23DDA00C72869 /* NetworkConstants.swift in Sources */,
+				DC8A9D8A27F4A78E000048E3 /* HomeRepositoryContract.swift in Sources */,
 				DC5AFB1227F23CFC00C72869 /* APIServiceContract.swift in Sources */,
 				DC5AFB5627F27F3E00C72869 /* AlertItem.swift in Sources */,
+				DC8A9D8827F4A78E000048E3 /* HomeService.swift in Sources */,
 				DC5AFAF927F2373000C72869 /* AppDelegate.swift in Sources */,
 				DC5AFB4627F27C5400C72869 /* NetworkContentType.swift in Sources */,
 				DC5AFB1927F2423E00C72869 /* EnvironmentManager.swift in Sources */,
+				DC8A9D8927F4A78E000048E3 /* HomeViewModelContract.swift in Sources */,
 				DC5AFB2D27F275AE00C72869 /* ErrorType.swift in Sources */,
 				DC5AFB4527F27C5400C72869 /* NetworkHeaders.swift in Sources */,
 				DC5AFB1E27F2487900C72869 /* Dictionary+Helpers.swift in Sources */,
@@ -496,8 +638,10 @@
 				DC5AFB2927F2728000C72869 /* BaseError.swift in Sources */,
 				DC5AFB3427F277D600C72869 /* ErrorType+Code.swift in Sources */,
 				DC5AFB4B27F27C9C00C72869 /* APIBuilder.swift in Sources */,
+				DC8A9D9927F4A8EB000048E3 /* HomeViewController.swift in Sources */,
 				DC5AFB5427F27EEE00C72869 /* UIApplication+UIHelpers.swift in Sources */,
 				DC5AFB3927F27ADC00C72869 /* DisposeObject.swift in Sources */,
+				DC8A9D8B27F4A78E000048E3 /* HomeServiceContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
