@@ -16,7 +16,6 @@
 		DC5AFB1C27F2474900C72869 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB1B27F2474900C72869 /* String+Helpers.swift */; };
 		DC5AFB1E27F2487900C72869 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB1D27F2487900C72869 /* Dictionary+Helpers.swift */; };
 		DC5AFB2227F259B500C72869 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB2127F259B500C72869 /* APIService.swift */; };
-		DC5AFB2627F2721E00C72869 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB2527F2721E00C72869 /* BaseResponse.swift */; };
 		DC5AFB2927F2728000C72869 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB2827F2728000C72869 /* BaseError.swift */; };
 		DC5AFB2D27F275AE00C72869 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB2C27F275AE00C72869 /* ErrorType.swift */; };
 		DC5AFB2F27F275C300C72869 /* ErrorType+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AFB2E27F275C300C72869 /* ErrorType+Message.swift */; };
@@ -50,7 +49,6 @@
 		DC5AFB1B27F2474900C72869 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		DC5AFB1D27F2487900C72869 /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Helpers.swift"; sourceTree = "<group>"; };
 		DC5AFB2127F259B500C72869 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		DC5AFB2527F2721E00C72869 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		DC5AFB2827F2728000C72869 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		DC5AFB2C27F275AE00C72869 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		DC5AFB2E27F275C300C72869 /* ErrorType+Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorType+Message.swift"; sourceTree = "<group>"; };
@@ -217,17 +215,8 @@
 			children = (
 				DC5AFB3A27F27B0500C72869 /* ViewModel */,
 				DC5AFB3727F27AD200C72869 /* Dispose */,
-				DC5AFB2427F2721200C72869 /* Response */,
 			);
 			path = Bases;
-			sourceTree = "<group>";
-		};
-		DC5AFB2427F2721200C72869 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				DC5AFB2527F2721E00C72869 /* BaseResponse.swift */,
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		DC5AFB2727F2727200C72869 /* Error */ = {
@@ -436,7 +425,6 @@
 				DC5AFB4427F27C5400C72869 /* NetworkMethods.swift in Sources */,
 				DC5AFB5127F27E9C00C72869 /* AlertAction.swift in Sources */,
 				DC5AFB2927F2728000C72869 /* BaseError.swift in Sources */,
-				DC5AFB2627F2721E00C72869 /* BaseResponse.swift in Sources */,
 				DC5AFB3427F277D600C72869 /* ErrorType+Code.swift in Sources */,
 				DC5AFB4B27F27C9C00C72869 /* APIBuilder.swift in Sources */,
 				DC5AFB5427F27EEE00C72869 /* UIApplication+UIHelpers.swift in Sources */,

@@ -12,7 +12,7 @@ final class ErrorResolver {
     
     private init() {}
     
-    func getError(code: Int, reason: String? = nil) -> BaseError {
+    func getError(code: Int) -> BaseError {
         var type: ErrorType = .unexpected
         
         switch code {
@@ -29,10 +29,17 @@ final class ErrorResolver {
         )
     }
     
-    func getError(for type: ErrorType, message: String? = nil) -> BaseError {
+    func getError(for type: ErrorType) -> BaseError {
         return .init(
             code: type.code,
-            message: message ?? type.message
+            message: type.message
+        )
+    }
+    
+    func getError(with error: Error) -> BaseError {
+        return BaseError(
+            code: -1,
+            message: error.localizedDescription
         )
     }
 }

@@ -14,7 +14,7 @@ protocol APIServiceContract {
         responseType: T.Type,
         decoder: JSONDecoder,
         retry: Int
-    ) -> AnyPublisher<BaseResponse<T>, BaseError>
+    ) -> AnyPublisher<T, BaseError>
 }
 
 // MARK: - APIServiceContract+Handle request func default implementation
@@ -22,7 +22,7 @@ extension APIServiceContract {
     func request<T: Decodable>(
         using request: URLRequest,
         responseType: T.Type
-    ) -> AnyPublisher<BaseResponse<T>, BaseError> {
+    ) -> AnyPublisher<T, BaseError> {
         self.request(
             using: request,
             responseType: responseType,

@@ -38,23 +38,25 @@ extension APIService: APIServiceContract {
         responseType: T.Type = T.self,
         decoder: JSONDecoder = .init(),
         retry: Int = NetworkConstants.retries
-    ) -> AnyPublisher<BaseResponse<T>, BaseError> {
+    ) -> AnyPublisher<T, BaseError> {
         
-        return session.dataTaskPublisher(for: request)
+        return session
+            .dataTaskPublisher(for: request)
             .retry(retry)
             .print()
             .tryMap { response in
-                guard let httpResponse = response.response as? HTTPURLResponse else {
+                guard
+                    let httpResponse = response.response as? HTTPURLResponse
+                else {
                     throw URLError(.badServerResponse)
                 }
                 
-                let result = try? decoder.decode(BaseResponse<T>.self, from: response.data)
-                let localStatusCode = httpResponse.statusCode
+                let statusCode: Int = httpResponse.statusCode
                 
-                throw BaseError(code: localStatusCode, message: result.debugDescription)
+                throw ErrorResolver.shared.getError(code: statusCode)
             }
             .receive(on: serviceQueue)
-            .decode(type: BaseResponse<T>.self, decoder: decoder)
+            .decode(type: T.self, decoder: decoder)
             .mapError(handleError(using:))
             .eraseToAnyPublisher()
     }
@@ -74,13 +76,7 @@ private extension APIService {
             return ErrorResolver.shared.getError(for: .mapping)
             
         default:
-            guard
-                let error = error as? BaseError
-            else {
-                return ErrorResolver.shared.getError(for: .unexpected)
-            }
-            
-            return error
+            return ErrorResolver.shared.getError(with: error)
         }
     }
 }
