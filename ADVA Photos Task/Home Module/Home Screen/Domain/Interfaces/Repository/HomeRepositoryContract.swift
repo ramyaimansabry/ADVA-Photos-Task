@@ -8,5 +8,5 @@
 import Combine
 
 protocol HomeRepositoryContract {
-    // TODO: Add Related Repository Methods
+    func fetchPhotosList() -> AnyPublisher<[PhotoData], BaseError>
 }

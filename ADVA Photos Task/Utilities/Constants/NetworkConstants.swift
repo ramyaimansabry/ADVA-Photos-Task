@@ -7,8 +7,9 @@
 
 import Foundation
 
-public enum NetworkConstants {
+enum NetworkConstants {
     enum Range {
+        static let statusCode = 200...299
         static let successCodes = 2000...2999
     }
     
@@ -21,8 +22,7 @@ public enum NetworkConstants {
     private static func getBaseUrl() -> String {
         let scheme = EnvironmentManager.shared.string(key: .serverScheme)
         let host = EnvironmentManager.shared.string(key: .serverHost)
-        let port = EnvironmentManager.shared.string(key: .serverPort)
         
-        return "\(scheme)://\(host):\(port)"
+        return "\(scheme)://\(host)"
     }
 }

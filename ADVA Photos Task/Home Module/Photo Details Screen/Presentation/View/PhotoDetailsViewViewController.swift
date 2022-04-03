@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  PhotoDetailsViewViewController.swift
 //  ADVA Photos Task
 //
 //  Created by Ramy Sabry on 30/03/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class PhotoDetailsViewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,10 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func onPressBackButton(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

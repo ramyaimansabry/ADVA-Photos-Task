@@ -8,5 +8,5 @@
 import Combine
 
 protocol HomeServiceContract {
-    // TODO: Replace APIService Placeholders
+    func fetchphotosList() -> AnyPublisher<[PhotoData], BaseError>
 }

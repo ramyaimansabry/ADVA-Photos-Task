@@ -44,6 +44,19 @@
 		DC8A9D8C27F4A78E000048E3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D8227F4A78E000048E3 /* HomeViewModel.swift */; };
 		DC8A9D9927F4A8EB000048E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D9727F4A8EB000048E3 /* HomeViewController.swift */; };
 		DC8A9D9A27F4A8EB000048E3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8A9D9827F4A8EB000048E3 /* HomeViewController.xib */; };
+		DC8A9D9D27F4AAF8000048E3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9D9C27F4AAF8000048E3 /* Coordinator.swift */; };
+		DC8A9DBA27F4B1B3000048E3 /* PhotoDetailsViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DAB27F4B1B3000048E3 /* PhotoDetailsViewModelContract.swift */; };
+		DC8A9DBD27F4B1B3000048E3 /* PhotoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DB327F4B1B3000048E3 /* PhotoDetailsViewModel.swift */; };
+		DC8A9DC227F4B1F6000048E3 /* PhotoDetailsViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DC027F4B1F6000048E3 /* PhotoDetailsViewViewController.swift */; };
+		DC8A9DC327F4B1F6000048E3 /* PhotoDetailsViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8A9DC127F4B1F6000048E3 /* PhotoDetailsViewViewController.xib */; };
+		DC8A9DC727F4B498000048E3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DC627F4B498000048E3 /* MainCoordinator.swift */; };
+		DC8A9DCA27F4B4CC000048E3 /* FetchPhotosListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DC827F4B4CC000048E3 /* FetchPhotosListUseCase.swift */; };
+		DC8A9DCB27F4B4CC000048E3 /* FetchPhotosListUseCaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DC927F4B4CC000048E3 /* FetchPhotosListUseCaseContract.swift */; };
+		DC8A9DCE27F4B53E000048E3 /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DCD27F4B53E000048E3 /* PhotoData.swift */; };
+		DC8A9DD127F4B680000048E3 /* Publisher+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DD027F4B680000048E3 /* Publisher+Helpers.swift */; };
+		DC8A9DD327FA3335000048E3 /* PhotoDownloadLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DD227FA3335000048E3 /* PhotoDownloadLinks.swift */; };
+		DC8A9DD527FA334C000048E3 /* PhotoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DD427FA334C000048E3 /* PhotoOwner.swift */; };
+		DC8A9DD727FA336C000048E3 /* PhotoURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DD627FA336C000048E3 /* PhotoURLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +100,19 @@
 		DC8A9D8227F4A78E000048E3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DC8A9D9727F4A8EB000048E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DC8A9D9827F4A8EB000048E3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		DC8A9D9C27F4AAF8000048E3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DC8A9DAB27F4B1B3000048E3 /* PhotoDetailsViewModelContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModelContract.swift; sourceTree = "<group>"; };
+		DC8A9DB327F4B1B3000048E3 /* PhotoDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModel.swift; sourceTree = "<group>"; };
+		DC8A9DC027F4B1F6000048E3 /* PhotoDetailsViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewViewController.swift; sourceTree = "<group>"; };
+		DC8A9DC127F4B1F6000048E3 /* PhotoDetailsViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailsViewViewController.xib; sourceTree = "<group>"; };
+		DC8A9DC627F4B498000048E3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		DC8A9DC827F4B4CC000048E3 /* FetchPhotosListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotosListUseCase.swift; sourceTree = "<group>"; };
+		DC8A9DC927F4B4CC000048E3 /* FetchPhotosListUseCaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotosListUseCaseContract.swift; sourceTree = "<group>"; };
+		DC8A9DCD27F4B53E000048E3 /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
+		DC8A9DD027F4B680000048E3 /* Publisher+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Helpers.swift"; sourceTree = "<group>"; };
+		DC8A9DD227FA3335000048E3 /* PhotoDownloadLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDownloadLinks.swift; sourceTree = "<group>"; };
+		DC8A9DD427FA334C000048E3 /* PhotoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOwner.swift; sourceTree = "<group>"; };
+		DC8A9DD627FA336C000048E3 /* PhotoURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoURLs.swift; sourceTree = "<group>"; };
 		F6570ECC2B492219FFAD1006 /* Pods-ADVA Photos Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADVA Photos Task.release.xcconfig"; path = "Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +166,7 @@
 		DC5AFAF727F2373000C72869 /* ADVA Photos Task */ = {
 			isa = PBXGroup;
 			children = (
-				DC8A9D7027F4A78E000048E3 /* Home Screen */,
+				DC8A9D9E27F4B15A000048E3 /* Home Module */,
 				DC5AFB0F27F23CBA00C72869 /* Utilities */,
 				DC5AFB0C27F23B8A00C72869 /* Resources */,
 				DC5AFB0E27F23BAD00C72869 /* Configurations */,
@@ -177,6 +203,7 @@
 		DC5AFB0F27F23CBA00C72869 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9D9B27F4AAE7000048E3 /* Navigation */,
 				DC5AFB2327F2720C00C72869 /* Bases */,
 				DC5AFB4E27F27E7E00C72869 /* Reusable Components */,
 				DC5AFB1A27F246F800C72869 /* Helpers */,
@@ -227,6 +254,7 @@
 		DC5AFB1A27F246F800C72869 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9DCF27F4B672000048E3 /* Publisher */,
 				DC5AFB5727F2812C00C72869 /* Optional */,
 				DC5AFB5227F27EE700C72869 /* UIApplication */,
 				DC5AFB2027F2489600C72869 /* Dictionary */,
@@ -412,6 +440,7 @@
 		DC8A9D7627F4A78E000048E3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9DCC27F4B532000048E3 /* Models */,
 				DC8A9D7727F4A78E000048E3 /* Use Cases */,
 				DC8A9D7827F4A78E000048E3 /* Interfaces */,
 			);
@@ -421,6 +450,7 @@
 		DC8A9D7727F4A78E000048E3 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9DC827F4B4CC000048E3 /* FetchPhotosListUseCase.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -455,6 +485,7 @@
 		DC8A9D7D27F4A78E000048E3 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9DC927F4B4CC000048E3 /* FetchPhotosListUseCaseContract.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -491,6 +522,118 @@
 				DC8A9D9827F4A8EB000048E3 /* HomeViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DC8A9D9B27F4AAE7000048E3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DC427F4B483000048E3 /* Core */,
+				DC8A9DC527F4B489000048E3 /* Coordinators */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		DC8A9D9E27F4B15A000048E3 /* Home Module */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D7027F4A78E000048E3 /* Home Screen */,
+				DC8A9DA127F4B1B3000048E3 /* Photo Details Screen */,
+			);
+			path = "Home Module";
+			sourceTree = "<group>";
+		};
+		DC8A9DA127F4B1B3000048E3 /* Photo Details Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DA727F4B1B3000048E3 /* Domain */,
+				DC8A9DB127F4B1B3000048E3 /* Presentation */,
+			);
+			path = "Photo Details Screen";
+			sourceTree = "<group>";
+		};
+		DC8A9DA727F4B1B3000048E3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DA927F4B1B3000048E3 /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DC8A9DA927F4B1B3000048E3 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DAA27F4B1B3000048E3 /* ViewModel */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		DC8A9DAA27F4B1B3000048E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DAB27F4B1B3000048E3 /* PhotoDetailsViewModelContract.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC8A9DB127F4B1B3000048E3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DB227F4B1B3000048E3 /* ViewModel */,
+				DC8A9DB627F4B1B3000048E3 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC8A9DB227F4B1B3000048E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DB327F4B1B3000048E3 /* PhotoDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC8A9DB627F4B1B3000048E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DC027F4B1F6000048E3 /* PhotoDetailsViewViewController.swift */,
+				DC8A9DC127F4B1F6000048E3 /* PhotoDetailsViewViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC8A9DC427F4B483000048E3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9D9C27F4AAF8000048E3 /* Coordinator.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DC8A9DC527F4B489000048E3 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DC627F4B498000048E3 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DC8A9DCC27F4B532000048E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DCD27F4B53E000048E3 /* PhotoData.swift */,
+				DC8A9DD227FA3335000048E3 /* PhotoDownloadLinks.swift */,
+				DC8A9DD427FA334C000048E3 /* PhotoOwner.swift */,
+				DC8A9DD627FA336C000048E3 /* PhotoURLs.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC8A9DCF27F4B672000048E3 /* Publisher */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DD027F4B680000048E3 /* Publisher+Helpers.swift */,
+			);
+			path = Publisher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC5AFB0527F2373200C72869 /* LaunchScreen.storyboard in Resources */,
+				DC8A9DC327F4B1F6000048E3 /* PhotoDetailsViewViewController.xib in Resources */,
 				DC5AFB0227F2373200C72869 /* Assets.xcassets in Resources */,
 				DC8A9D9A27F4A8EB000048E3 /* HomeViewController.xib in Resources */,
 			);
@@ -609,35 +753,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8A9DD727FA336C000048E3 /* PhotoURLs.swift in Sources */,
+				DC8A9DD127F4B680000048E3 /* Publisher+Helpers.swift in Sources */,
 				DC5AFB2F27F275C300C72869 /* ErrorType+Message.swift in Sources */,
+				DC8A9DCB27F4B4CC000048E3 /* FetchPhotosListUseCaseContract.swift in Sources */,
 				DC5AFB1C27F2474900C72869 /* String+Helpers.swift in Sources */,
 				DC5AFB4D27F27D6E00C72869 /* APIConstants.swift in Sources */,
 				DC8A9D8C27F4A78E000048E3 /* HomeViewModel.swift in Sources */,
 				DC5AFB3E27F27B2E00C72869 /* ViewModelState.swift in Sources */,
+				DC8A9DD327FA3335000048E3 /* PhotoDownloadLinks.swift in Sources */,
 				DC5AFB3627F277ED00C72869 /* ErrorConstants.swift in Sources */,
 				DC5AFB4727F27C5400C72869 /* NetworkParameters.swift in Sources */,
 				DC5AFB5927F2813600C72869 /* Optional+Helpers.swift in Sources */,
 				DC8A9D8727F4A78E000048E3 /* HomeRepository.swift in Sources */,
 				DC5AFB3227F2764200C72869 /* ErrorResolver.swift in Sources */,
+				DC8A9DCE27F4B53E000048E3 /* PhotoData.swift in Sources */,
+				DC8A9D9D27F4AAF8000048E3 /* Coordinator.swift in Sources */,
 				DC5AFB2227F259B500C72869 /* APIService.swift in Sources */,
 				DC5AFB3C27F27B0E00C72869 /* BaseViewModel.swift in Sources */,
 				DC5AFB1527F23DDA00C72869 /* NetworkConstants.swift in Sources */,
 				DC8A9D8A27F4A78E000048E3 /* HomeRepositoryContract.swift in Sources */,
 				DC5AFB1227F23CFC00C72869 /* APIServiceContract.swift in Sources */,
+				DC8A9DD527FA334C000048E3 /* PhotoOwner.swift in Sources */,
+				DC8A9DC227F4B1F6000048E3 /* PhotoDetailsViewViewController.swift in Sources */,
 				DC5AFB5627F27F3E00C72869 /* AlertItem.swift in Sources */,
+				DC8A9DCA27F4B4CC000048E3 /* FetchPhotosListUseCase.swift in Sources */,
 				DC8A9D8827F4A78E000048E3 /* HomeService.swift in Sources */,
 				DC5AFAF927F2373000C72869 /* AppDelegate.swift in Sources */,
 				DC5AFB4627F27C5400C72869 /* NetworkContentType.swift in Sources */,
 				DC5AFB1927F2423E00C72869 /* EnvironmentManager.swift in Sources */,
 				DC8A9D8927F4A78E000048E3 /* HomeViewModelContract.swift in Sources */,
 				DC5AFB2D27F275AE00C72869 /* ErrorType.swift in Sources */,
+				DC8A9DBA27F4B1B3000048E3 /* PhotoDetailsViewModelContract.swift in Sources */,
 				DC5AFB4527F27C5400C72869 /* NetworkHeaders.swift in Sources */,
+				DC8A9DBD27F4B1B3000048E3 /* PhotoDetailsViewModel.swift in Sources */,
 				DC5AFB1E27F2487900C72869 /* Dictionary+Helpers.swift in Sources */,
 				DC5AFB4427F27C5400C72869 /* NetworkMethods.swift in Sources */,
 				DC5AFB5127F27E9C00C72869 /* AlertAction.swift in Sources */,
 				DC5AFB2927F2728000C72869 /* BaseError.swift in Sources */,
 				DC5AFB3427F277D600C72869 /* ErrorType+Code.swift in Sources */,
 				DC5AFB4B27F27C9C00C72869 /* APIBuilder.swift in Sources */,
+				DC8A9DC727F4B498000048E3 /* MainCoordinator.swift in Sources */,
 				DC8A9D9927F4A8EB000048E3 /* HomeViewController.swift in Sources */,
 				DC5AFB5427F27EEE00C72869 /* UIApplication+UIHelpers.swift in Sources */,
 				DC5AFB3927F27ADC00C72869 /* DisposeObject.swift in Sources */,
@@ -798,8 +954,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ramysabry1996.ADVA-Photos-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SERVER_HOST = "";
-				SERVER_PORT = "";
+				SERVER_HOST = api.unsplash.com;
 				SERVER_SCHEME = https;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -830,8 +985,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ramysabry1996.ADVA-Photos-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SERVER_HOST = "";
-				SERVER_PORT = "";
+				SERVER_HOST = api.unsplash.com;
 				SERVER_SCHEME = https;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

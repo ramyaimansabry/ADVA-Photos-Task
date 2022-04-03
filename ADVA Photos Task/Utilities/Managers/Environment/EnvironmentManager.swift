@@ -17,7 +17,6 @@ final class EnvironmentManager {
                 
         case serverScheme = "SERVER_SCHEME"
         case serverHost = "SERVER_HOST"
-        case serverPort = "SERVER_PORT"
     }
     
     static let shared = EnvironmentManager()

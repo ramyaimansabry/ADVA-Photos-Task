@@ -24,16 +24,27 @@ class APIBuilder {
         return self
     }
     
+    // >>>>
+    
     @discardableResult
-    func setPath(using path: APIConstants) -> APIBuilder {
+    public func setPath(using path: APIConstants) -> APIBuilder {
         setPath(using: path, argument: [])
         return self
     }
     
     @discardableResult
-    func setPath(using path: APIConstants, argument: CVarArg) -> APIBuilder {
+    public func setPath(using path: APIConstants, argument: CVarArg) -> APIBuilder {
         setPath(using: path, argument: [argument])
     }
+    
+    @discardableResult
+    public func setPath(using path: APIConstants, argument: [CVarArg]) -> APIBuilder {
+//        self.setHostIsMocked(by: path)
+        self.setPath(using: path.rawValue.localizedFormat(using: argument))
+        return self
+    }
+    
+    // >>>
     
     @discardableResult
     func setMethod(using method: HTTPMethod) -> APIBuilder {
@@ -49,31 +60,31 @@ class APIBuilder {
         return self
     }
     
-    @discardableResult
-    func setParameters(using parameters: RequestParams) -> APIBuilder {
-        switch parameters {
-        case .body(let params):
-            do {
-                self.urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
-            } catch {
-                fatalError("Could not serialize \(params)")
-            }
-
-        case .query(let params):
-            let queryParams = params.map { pair in
-                return URLQueryItem(name: pair.key, value: "\(pair.value)")
-            }
-            
-            if let url = self.urlRequest.url {
-                var components = URLComponents(string: url.absoluteString)
-                components?.queryItems = queryParams
-                
-                self.urlRequest.url = components?.url
-            }
-        }
-        
-        return self
-    }
+//    @discardableResult
+//    func setParameters(using parameters: RequestParams) -> APIBuilder {
+//        switch parameters {
+//        case .body(let params):
+//            do {
+//                self.urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+//            } catch {
+//                fatalError("Could not serialize \(params)")
+//            }
+//
+//        case .query(let params):
+//            let queryParams = params.map { pair in
+//                return URLQueryItem(name: pair.key, value: "\(pair.value)")
+//            }
+//
+//            if let url = self.urlRequest.url {
+//                var components = URLComponents(string: url.absoluteString)
+//                components?.queryItems = queryParams
+//
+//                self.urlRequest.url = components?.url
+//            }
+//        }
+//
+//        return self
+//    }
   
     func build() -> URLRequest {
         guard let url = self.urlRequest.url, !url.pathComponents.isEmpty else {
@@ -91,5 +102,29 @@ class APIBuilder {
 //        }
         
         return self.urlRequest
+    }
+}
+
+private extension APIBuilder {
+    func setPath(using path: String) {
+        let base: URL? = self.urlRequest.url
+        let baseAppend = base?.appendingPathComponent(path).absoluteString.removingPercentEncoding
+        guard let baseAppend = baseAppend, let newURL = URL(string: baseAppend) else { return }
+        self.urlRequest.url = newURL
+    }
+}
+
+extension String {
+    var localized: String {
+        // swiftlint:disable nslocalizedstring_key
+        NSLocalizedString(
+            self,
+            value: self,
+            comment: ""
+        )
+    }
+    
+    func localizedFormat(using arguments: [CVarArg]) -> String {
+        return String(format: self.localized, arguments: arguments)
     }
 }

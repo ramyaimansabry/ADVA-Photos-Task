@@ -53,7 +53,11 @@ extension APIService: APIServiceContract {
                 
                 let statusCode: Int = httpResponse.statusCode
                 
-                throw ErrorResolver.shared.getError(code: statusCode)
+                guard NetworkConstants.Range.statusCode.contains(statusCode) else {
+                    throw ErrorResolver.shared.getError(code: statusCode)
+                }
+                
+                return response.data
             }
             .receive(on: serviceQueue)
             .decode(type: T.self, decoder: decoder)
