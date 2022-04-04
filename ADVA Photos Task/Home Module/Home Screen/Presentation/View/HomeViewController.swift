@@ -40,10 +40,7 @@ private extension HomeViewController {
         photosListCollectionView.delegate = self
         photosListCollectionView.dataSource = self
 //        photosListCollectionView.collectionViewLayout = photosListCustomCollectionViewLayout
-        photosListCollectionView.register(
-            UINib(nibName: "PhotoCell", bundle: nil),
-            forCellWithReuseIdentifier: "PhotoCell"
-        )
+        photosListCollectionView.registerCellNib(PhotoCell.self)
         photosListCollectionView.showsVerticalScrollIndicator = false
         photosListCollectionView.showsHorizontalScrollIndicator = false
     }
@@ -70,7 +67,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+        let cell: PhotoCell = collectionView.dequeue(at: indexPath)
         cell.data = viewModel.getPhotoData(for: indexPath)
         return cell
     }
@@ -80,9 +77,8 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.photosList.count - 5 {
-            viewModel.loadMorePhotos()
-        }
+        guard indexPath.row == viewModel.photosList.count - 5 else { return }
+        viewModel.loadMorePhotos()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

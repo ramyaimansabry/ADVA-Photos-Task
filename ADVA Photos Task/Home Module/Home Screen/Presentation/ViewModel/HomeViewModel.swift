@@ -41,9 +41,9 @@ final class HomeViewModel: HomeViewModelContract {
     }
     
     func loadMorePhotos() {
-//        guard state != .loading else { return }
-//        pageIndex += 1
-//        loadPhotos()
+        guard state != .loading else { return }
+        pageIndex += 1
+        loadPhotos()
     }
     
     // MARK: - Output Methods
