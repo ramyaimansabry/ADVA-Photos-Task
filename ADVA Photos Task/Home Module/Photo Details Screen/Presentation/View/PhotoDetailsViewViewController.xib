@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailsViewViewController" customModule="ADVA_Photos_Task" customModuleProvider="target">
+            <connections>
+                <outlet property="photoImageView" destination="lr9-sj-mRm" id="tGc-2J-Bhn"/>
+                <outlet property="scrollView" destination="NtK-8L-oC7" id="W9w-cn-eSF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtK-8L-oC7">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lr9-sj-mRm" customClass="AsyncImageView" customModule="ADVA_Photos_Task" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="lr9-sj-mRm" secondAttribute="bottom" id="2J8-4H-0dF"/>
+                        <constraint firstItem="lr9-sj-mRm" firstAttribute="leading" secondItem="NtK-8L-oC7" secondAttribute="leading" id="gnG-BX-WX6"/>
+                        <constraint firstAttribute="trailing" secondItem="lr9-sj-mRm" secondAttribute="trailing" id="mfM-Qg-cyw"/>
+                        <constraint firstItem="lr9-sj-mRm" firstAttribute="top" secondItem="NtK-8L-oC7" secondAttribute="top" id="wZV-wc-mGD"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="52c-9p-5ds"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="bXG-WQ-q7a"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaN-jO-UmD">
+                    <rect key="frame" x="20" y="59" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="A6i-Yu-ir1"/>
+                        <constraint firstAttribute="width" constant="35" id="WOs-C9-cYb"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemPinkColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward" catalog="system" title=" "/>
+                    <connections>
+                        <action selector="onPressBackButton:" destination="-1" eventType="touchUpInside" id="7Ch-Xa-yT4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OaN-jO-UmD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="EvR-B6-ogj"/>
+                <constraint firstItem="NtK-8L-oC7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EvT-u0-UmG"/>
+                <constraint firstItem="NtK-8L-oC7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HuY-bE-LId"/>
+                <constraint firstItem="OaN-jO-UmD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="P7T-dI-Na9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NtK-8L-oC7" secondAttribute="trailing" id="jGI-gI-K6X"/>
+                <constraint firstAttribute="bottom" secondItem="NtK-8L-oC7" secondAttribute="bottom" id="kho-mj-ylL"/>
+                <constraint firstItem="lr9-sj-mRm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="oPa-27-iTi"/>
+                <constraint firstItem="lr9-sj-mRm" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="qsP-4y-Qp6"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
