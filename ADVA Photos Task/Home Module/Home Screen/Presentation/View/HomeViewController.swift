@@ -58,7 +58,7 @@ private extension HomeViewController {
         navigationItem.title = "Featured"
     }
     
-    func animate(_ cell: UICollectionViewCell, for indexPath: IndexPath) {
+    func animate(_ cell: UICollectionViewCell, with indexPath: IndexPath) {
         guard !presentedPhotosIndexes.contains(indexPath) else { return }
                 
         presentedPhotosIndexes.append(indexPath)
@@ -94,7 +94,7 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        animate(cell, for: indexPath)
+        animate(cell, with: indexPath)
         
         guard indexPath.row == viewModel.photosList.count - 5 else { return }
         viewModel.loadMorePhotos()
