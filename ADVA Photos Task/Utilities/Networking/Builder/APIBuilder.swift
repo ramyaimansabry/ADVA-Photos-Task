@@ -28,8 +28,6 @@ class APIBuilder {
         return self
     }
     
-    // >>>>
-    
     @discardableResult
     public func setPath(using path: APIConstants) -> APIBuilder {
         setPath(using: path, argument: [])
@@ -43,12 +41,9 @@ class APIBuilder {
     
     @discardableResult
     public func setPath(using path: APIConstants, argument: [CVarArg]) -> APIBuilder {
-//        self.setHostIsMocked(by: path)
         self.setPath(using: path.rawValue.localizedFormat(using: argument))
         return self
     }
-    
-    // >>>
     
     @discardableResult
     func setMethod(using method: HTTPMethod) -> APIBuilder {
