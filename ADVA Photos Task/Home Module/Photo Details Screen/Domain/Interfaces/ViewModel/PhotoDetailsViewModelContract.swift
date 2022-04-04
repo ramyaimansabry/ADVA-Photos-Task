@@ -7,8 +7,8 @@
 
 import Foundation
 
-typealias PhotoDetailsViewModelContract = BaseViewModel & ObservableObject & PhotoDetailsViewModelInput & PhotoDetailsViewModelOutput
+typealias PhotoDetailsViewModelContract = BaseViewModel & ObservableObject & PhotoDetailsViewModelOutput
 
-protocol PhotoDetailsViewModelInput {}
-
-protocol PhotoDetailsViewModelOutput {}
+protocol PhotoDetailsViewModelOutput {
+    var photoURL: String? { get }
+}

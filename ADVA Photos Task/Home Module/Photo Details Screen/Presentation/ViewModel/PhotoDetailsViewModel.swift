@@ -7,4 +7,15 @@
 
 import Combine
 
-final class PhotoDetailsViewModel: PhotoDetailsViewModelContract {}
+final class PhotoDetailsViewModel: PhotoDetailsViewModelContract {
+    private let photoData: PhotoData
+    
+    var photoURL: String? {
+        return photoData.urls?.full
+    }
+    
+    init(photoData: PhotoData) {
+        self.photoData = photoData
+        super.init()
+    }
+}

@@ -9,7 +9,6 @@ import UIKit
 import Combine
 
 class HomeViewController: BaseViewController {
-    
     @IBOutlet weak var photosListCollectionView: UICollectionView!
     
     private lazy var photosListCustomCollectionViewLayout: PhotosCollectionViewCustomLayout = {
@@ -31,6 +30,8 @@ class HomeViewController: BaseViewController {
         viewModel.loadPhotos()
     }
 }
+
+// MARK: - Private Methods
 
 private extension HomeViewController {
     func setupCollectionViewList() {
@@ -56,7 +57,16 @@ private extension HomeViewController {
     func setupNavigationBar() {
         navigationItem.title = "Featured"
     }
+    
+    func navigateToPhotoDetailsScreen(using photoData: PhotoData) {
+        let viewController = PhotoDetailsViewViewController(photoData: photoData)
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+        navigationController?.present(viewController, animated: true, completion: nil)
+    }
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -70,13 +80,22 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row == viewModel.photosList.count - 5 {
             viewModel.loadMorePhotos()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let photoData: PhotoData = viewModel.getPhotoData(for: indexPath) else { return }
+        navigateToPhotoDetailsScreen(using: photoData)
+    }
 }
+
+// MARK: - CollectionViewCustomLayoutDelegate
 
 extension HomeViewController: CollectionViewCustomLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, sizeOfItemAtIndexPath indexPath: IndexPath) -> CGSize {

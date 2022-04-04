@@ -30,6 +30,6 @@ class MainCoordinator: Coordinator {
     }
     
     func presentDetailsScreen() {
-        navigationController.present(PhotoDetailsViewViewController(), animated: true, completion: nil)
+//        navigationController.present(PhotoDetailsViewViewController(), animated: true, completion: nil)
     }
 }

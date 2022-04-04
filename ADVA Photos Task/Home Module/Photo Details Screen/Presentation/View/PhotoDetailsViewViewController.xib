@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailsViewViewController" customModule="ADVA_Photos_Task" customModuleProvider="target">
             <connections>
+                <outlet property="photoImageView" destination="lr9-sj-mRm" id="fp7-yY-scg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,26 +21,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaN-jO-UmD">
-                    <rect key="frame" x="25" y="69" width="56" height="31"/>
+                    <rect key="frame" x="15" y="59" width="49.5" height="31"/>
+                    <color key="tintColor" systemColor="systemPinkColor"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward" catalog="system" title=" "/>
                     <connections>
                         <action selector="onPressBackButton:" destination="-1" eventType="touchUpInside" id="7Ch-Xa-yT4"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lr9-sj-mRm">
+                    <rect key="frame" x="0.0" y="105" width="414" height="727"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="OaN-jO-UmD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="EvR-B6-ogj"/>
-                <constraint firstItem="OaN-jO-UmD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="P7T-dI-Na9"/>
+                <constraint firstItem="lr9-sj-mRm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2pv-i9-Tve"/>
+                <constraint firstItem="OaN-jO-UmD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="EvR-B6-ogj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lr9-sj-mRm" secondAttribute="bottom" constant="30" id="ORf-JK-X4Q"/>
+                <constraint firstItem="OaN-jO-UmD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="P7T-dI-Na9"/>
+                <constraint firstItem="lr9-sj-mRm" firstAttribute="top" secondItem="OaN-jO-UmD" secondAttribute="bottom" constant="15" id="fsB-t5-ZiD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lr9-sj-mRm" secondAttribute="trailing" id="i6n-Oa-kgF"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="114"/>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>
     </objects>
     <resources>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
