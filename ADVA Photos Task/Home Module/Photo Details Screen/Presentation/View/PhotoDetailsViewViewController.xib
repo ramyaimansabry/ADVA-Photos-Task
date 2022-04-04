@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtK-8L-oC7">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lr9-sj-mRm" customClass="AsyncImageView" customModule="ADVA_Photos_Task" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         </imageView>
                     </subviews>
                     <constraints>
@@ -54,14 +54,14 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="NtK-8L-oC7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6Bu-h0-xWq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NtK-8L-oC7" secondAttribute="bottom" id="CFN-fy-6pu"/>
                 <constraint firstItem="OaN-jO-UmD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="EvR-B6-ogj"/>
                 <constraint firstItem="NtK-8L-oC7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EvT-u0-UmG"/>
+                <constraint firstItem="NtK-8L-oC7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HuY-bE-LId"/>
                 <constraint firstItem="OaN-jO-UmD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="P7T-dI-Na9"/>
-                <constraint firstItem="lr9-sj-mRm" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="dWs-hf-mnD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NtK-8L-oC7" secondAttribute="trailing" id="jGI-gI-K6X"/>
-                <constraint firstItem="lr9-sj-mRm" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="zUg-I0-bAl"/>
+                <constraint firstAttribute="bottom" secondItem="NtK-8L-oC7" secondAttribute="bottom" id="kho-mj-ylL"/>
+                <constraint firstItem="lr9-sj-mRm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="oPa-27-iTi"/>
+                <constraint firstItem="lr9-sj-mRm" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="qsP-4y-Qp6"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>
