@@ -1,0 +1,6 @@
+framework module Pods_ADVA_Photos_Task {
+  umbrella header "Pods-ADVA Photos Task-umbrella.h"
+
+  export *
+  module * { export * }
+}
