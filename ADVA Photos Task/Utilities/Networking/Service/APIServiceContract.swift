@@ -18,6 +18,7 @@ protocol APIServiceContract {
 }
 
 // MARK: - APIServiceContract+Handle request func default implementation
+
 extension APIServiceContract {
     func request<T: Decodable>(
         using request: URLRequest,
