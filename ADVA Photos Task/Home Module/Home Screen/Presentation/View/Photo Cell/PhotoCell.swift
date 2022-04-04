@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import SDWebImage
 
 class PhotoCell: UICollectionViewCell {
 
-    @IBOutlet weak var ownerProfileImageView: UIImageView!
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var ownerProfileImageView: AsyncImageView!
+    @IBOutlet weak var photoImageView: AsyncImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     
@@ -34,11 +33,11 @@ class PhotoCell: UICollectionViewCell {
     }
 
     private func setImage(using url: String?) {
-        photoImageView.sd_setImage(with: URL(string: url.value), completed: nil)
+        photoImageView.setImage(using: url)
     }
     
     private func setOwnerProfileImage(using url: String?) {
-        ownerProfileImageView.sd_setImage(with: URL(string: url.value), completed: nil)
+        ownerProfileImageView.setImage(using: url)
         ownerProfileImageView.isHidden = url.isNil
     }
     

@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import SDWebImage
 
 class PhotoDetailsViewViewController: BaseViewController {
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoImageView: AsyncImageView!
     
     private var viewModel: PhotoDetailsViewModel
     
@@ -46,7 +45,7 @@ private extension PhotoDetailsViewViewController {
     }
     
     func loadPhotoImage() {
-        photoImageView.sd_setImage(with: URL(string: viewModel.photoURL.value), completed: nil)
+        photoImageView.setImage(using: viewModel.photoURL)
     }
 }
 

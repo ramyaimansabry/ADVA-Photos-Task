@@ -8,14 +8,28 @@
 import UIKit
 import SDWebImage
 
-//class AsyncImageView: UIImageView {
-//
-//    init() {
-//        super.init()
-//        sd_imageIndicator = SDWebImageActivityIndicator.gray
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
+@IBDesignable
+class AsyncImageView: UIImageView {
+    override init(image: UIImage?) {
+        super.init(image: image)
+        setup()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup() {
+        sd_imageIndicator = SDWebImageActivityIndicator.large
+    }
+    
+    func setImage(using url: String?) {
+        sd_setImage(with: URL(string: url.value), completed: nil)
+    }
+}
