@@ -21,7 +21,7 @@ class HomeViewController: BaseViewController {
     }()
     
     private let viewModel = HomeViewModel()
-    
+    private var presentedPhotosIndexes: [IndexPath] = []
     var coordinator: HomeCoordinatorProtocol?
     
     override func viewDidLoad() {
@@ -57,6 +57,23 @@ private extension HomeViewController {
     func setupNavigationBar() {
         navigationItem.title = "Featured"
     }
+    
+    func animate(_ cell: UICollectionViewCell, for indexPath: IndexPath) {
+        guard !presentedPhotosIndexes.contains(indexPath) else { return }
+                
+        presentedPhotosIndexes.append(indexPath)
+        
+        cell.transform = CGAffineTransform(translationX: 0, y: 200)
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 10, height: 10)
+        cell.alpha = 0
+        
+        UIView.animate(withDuration: 0.3) {
+            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            cell.alpha = 1
+            cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -77,6 +94,8 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        animate(cell, for: indexPath)
+        
         guard indexPath.row == viewModel.photosList.count - 5 else { return }
         viewModel.loadMorePhotos()
     }

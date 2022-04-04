@@ -19,6 +19,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oppo-BI0tdf32fcs-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="SMq-u7-rnn" customClass="AsyncImageView" customModule="ADVA_Photos_Task" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="436" height="368"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RBS-xV-5vA">
                         <rect key="frame" x="8" y="333.5" width="83" height="26.5"/>
@@ -48,11 +49,12 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="SMq-u7-rnn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Hb6-pb-PzO"/>
                 <constraint firstAttribute="bottom" secondItem="RBS-xV-5vA" secondAttribute="bottom" constant="8" id="Hhr-Hk-sac"/>

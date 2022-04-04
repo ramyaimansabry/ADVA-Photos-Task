@@ -38,7 +38,7 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="bXG-WQ-q7a"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaN-jO-UmD">
-                    <rect key="frame" x="15" y="59" width="35" height="35"/>
+                    <rect key="frame" x="20" y="59" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="A6i-Yu-ir1"/>
                         <constraint firstAttribute="width" constant="35" id="WOs-C9-cYb"/>
@@ -58,7 +58,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NtK-8L-oC7" secondAttribute="bottom" id="CFN-fy-6pu"/>
                 <constraint firstItem="OaN-jO-UmD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="EvR-B6-ogj"/>
                 <constraint firstItem="NtK-8L-oC7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EvT-u0-UmG"/>
-                <constraint firstItem="OaN-jO-UmD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="P7T-dI-Na9"/>
+                <constraint firstItem="OaN-jO-UmD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="P7T-dI-Na9"/>
                 <constraint firstItem="lr9-sj-mRm" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="dWs-hf-mnD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NtK-8L-oC7" secondAttribute="trailing" id="jGI-gI-K6X"/>
                 <constraint firstItem="lr9-sj-mRm" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="zUg-I0-bAl"/>
