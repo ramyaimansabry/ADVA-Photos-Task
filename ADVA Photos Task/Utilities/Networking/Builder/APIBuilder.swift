@@ -64,31 +64,31 @@ class APIBuilder {
         return self
     }
     
-//    @discardableResult
-//    func setParameters(using parameters: RequestParams) -> APIBuilder {
-//        switch parameters {
-//        case .body(let params):
-//            do {
-//                self.urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
-//            } catch {
-//                fatalError("Could not serialize \(params)")
-//            }
-//
-//        case .query(let params):
-//            let queryParams = params.map { pair in
-//                return URLQueryItem(name: pair.key, value: "\(pair.value)")
-//            }
-//
-//            if let url = self.urlRequest.url {
-//                var components = URLComponents(string: url.absoluteString)
-//                components?.queryItems = queryParams
-//
-//                self.urlRequest.url = components?.url
-//            }
-//        }
-//
-//        return self
-//    }
+    @discardableResult
+    func setParameters(using parameters: RequestParams) -> APIBuilder {
+        switch parameters {
+        case .body(let params):
+            do {
+                self.urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+            } catch {
+                fatalError("Could not serialize \(params)")
+            }
+
+        case .query(let params):
+            let queryParams = params.map { pair in
+                return URLQueryItem(name: pair.key, value: "\(pair.value)")
+            }
+
+            if let url = self.urlRequest.url {
+                var components = URLComponents(string: url.absoluteString)
+                components?.queryItems = queryParams
+
+                self.urlRequest.url = components?.url
+            }
+        }
+
+        return self
+    }
   
     func build() -> URLRequest {
         guard
@@ -98,8 +98,7 @@ class APIBuilder {
             fatalError("API should contain at least one path.")
         }
         
-        let absoluteURLString: String = url.absoluteString + "&client_id=\(clientID)"
-        self.urlRequest.url = URL(string: absoluteURLString)
+        setClientId()
                 
         self.urlRequest.setValue(ContentType.json, forHTTPHeaderField: HTTPHeader.contentType)
         
@@ -113,5 +112,12 @@ private extension APIBuilder {
         let baseAppend = base?.appendingPathComponent(path).absoluteString.removingPercentEncoding
         guard let baseAppend = baseAppend, let newURL = URL(string: baseAppend) else { return }
         self.urlRequest.url = newURL
+    }
+    
+    // Set Client ID in each url request
+    func setClientId() {
+        guard let url = self.urlRequest.url else { return }
+        let absoluteURLString: String = url.absoluteString + "&client_id=\(clientID)"
+        self.urlRequest.url = URL(string: absoluteURLString)
     }
 }
