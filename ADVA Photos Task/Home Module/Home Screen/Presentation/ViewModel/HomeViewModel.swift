@@ -19,19 +19,39 @@ final class HomeViewModel: HomeViewModelContract {
         
         self.loadPhotos()
     }
-}
-
-private extension HomeViewModel {
+    
+    // MARK: - Input Methods
     func loadPhotos() {
         fetchPhotosUseCase
             .execute()
             .receive(on: RunLoop.main)
-            .sink { completion in
-                print(completion)
-            } receiveValue: { photosListResponse in
-                print(photosListResponse)
+            .sink { [weak self] completion in
+                guard let self = self else { return }
+                guard case .failure(let error) = completion else { return }
+                self.state = .failed(error)
+            } receiveValue: { [weak self] photosListResponse in
+                guard let self = self else { return }
+                self.photosList.append(contentsOf: photosListResponse)
+                self.state = .successful
             }
             .store(in: &cancellables)
 
+    }
+    
+    // MARK: - Output Methods
+    func getPhotoData(for indexPath: IndexPath) -> PhotoData? {
+        return photosList[safe: indexPath.row]
+    }
+    
+    func getPhotoSize(for indexPath: IndexPath) -> (Float, Float) {
+        guard
+            let item: PhotoData = photosList[safe: indexPath.row],
+            let width: Float = item.width,
+            let height: Float = item.height
+        else {
+            return (100, 50)
+        }
+        
+        return (width, height)
     }
 }

@@ -12,8 +12,8 @@ struct PhotoData: Decodable {
     let createdAt: String?
     let updatedAt: String?
     let promotedAt: String?
-    let width: Int?
-    let height: Int?
+    let width: Float?
+    let height: Float?
     let color: String?
     let blurHash: String?
     let welcomeDescription: String?
@@ -22,5 +22,6 @@ struct PhotoData: Decodable {
     let links: PhotoDownloadLinks?
     let likes: Int?
     let likedByUser: Bool?
+    let sponsorship: PhotoSponsorship?
     let user: PhotoOwner?
 }

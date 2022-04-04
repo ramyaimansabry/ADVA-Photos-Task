@@ -6,4 +6,6 @@ target 'ADVA Photos Task' do
 
   pod 'SwiftLint', '0.44.0'
 
+  pod 'SDWebImage', '5.12.5'
+
 end

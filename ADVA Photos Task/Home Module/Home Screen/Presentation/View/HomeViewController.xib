@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ADVA_Photos_Task" customModuleProvider="target">
             <connections>
+                <outlet property="photosListCollectionView" destination="sdS-5B-8uQ" id="qcF-ZC-bbZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,20 +20,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-oP-LQE">
-                    <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    <connections>
-                        <action selector="onPressButton:" destination="-1" eventType="touchUpInside" id="7d1-Q5-Koy"/>
-                    </connections>
-                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sdS-5B-8uQ">
+                    <rect key="frame" x="5" y="0.0" width="404" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4h8-qc-RPm">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ez5-oP-LQE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4vp-2a-yz2"/>
-                <constraint firstItem="ez5-oP-LQE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5pL-Vy-jXT"/>
+                <constraint firstItem="sdS-5B-8uQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6Kz-Ez-9lB"/>
+                <constraint firstAttribute="bottom" secondItem="sdS-5B-8uQ" secondAttribute="bottom" id="8P4-e9-dSY"/>
+                <constraint firstItem="sdS-5B-8uQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="O1c-ct-BWn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sdS-5B-8uQ" secondAttribute="trailing" constant="5" id="TCg-Jq-Cpv"/>
             </constraints>
             <point key="canvasLocation" x="139" y="114"/>
         </view>

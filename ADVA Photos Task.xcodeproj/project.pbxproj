@@ -57,6 +57,12 @@
 		DC8A9DD327FA3335000048E3 /* PhotoDownloadLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DD227FA3335000048E3 /* PhotoDownloadLinks.swift */; };
 		DC8A9DD527FA334C000048E3 /* PhotoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DD427FA334C000048E3 /* PhotoOwner.swift */; };
 		DC8A9DD727FA336C000048E3 /* PhotoURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DD627FA336C000048E3 /* PhotoURLs.swift */; };
+		DC8A9DDB27FA39FD000048E3 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DD927FA39FD000048E3 /* PhotoCell.swift */; };
+		DC8A9DDC27FA39FD000048E3 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8A9DDA27FA39FD000048E3 /* PhotoCell.xib */; };
+		DC8A9DDE27FA6098000048E3 /* PhotoSponsorship.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DDD27FA6098000048E3 /* PhotoSponsorship.swift */; };
+		DC8A9DE127FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DE027FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift */; };
+		DC8A9DE327FA6B0B000048E3 /* PhotosCollectionViewCustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DE227FA6B0B000048E3 /* PhotosCollectionViewCustomLayout.swift */; };
+		DC8A9DE627FA6BE1000048E3 /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DE527FA6BE1000048E3 /* Collection+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +119,12 @@
 		DC8A9DD227FA3335000048E3 /* PhotoDownloadLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDownloadLinks.swift; sourceTree = "<group>"; };
 		DC8A9DD427FA334C000048E3 /* PhotoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOwner.swift; sourceTree = "<group>"; };
 		DC8A9DD627FA336C000048E3 /* PhotoURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoURLs.swift; sourceTree = "<group>"; };
+		DC8A9DD927FA39FD000048E3 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		DC8A9DDA27FA39FD000048E3 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		DC8A9DDD27FA6098000048E3 /* PhotoSponsorship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSponsorship.swift; sourceTree = "<group>"; };
+		DC8A9DE027FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCustomLayoutDelegate.swift; sourceTree = "<group>"; };
+		DC8A9DE227FA6B0B000048E3 /* PhotosCollectionViewCustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCustomLayout.swift; sourceTree = "<group>"; };
+		DC8A9DE527FA6BE1000048E3 /* Collection+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Helpers.swift"; sourceTree = "<group>"; };
 		F6570ECC2B492219FFAD1006 /* Pods-ADVA Photos Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADVA Photos Task.release.xcconfig"; path = "Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +266,7 @@
 		DC5AFB1A27F246F800C72869 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9DE427FA6BD9000048E3 /* Collection */,
 				DC8A9DCF27F4B672000048E3 /* Publisher */,
 				DC5AFB5727F2812C00C72869 /* Optional */,
 				DC5AFB5227F27EE700C72869 /* UIApplication */,
@@ -520,6 +533,8 @@
 			children = (
 				DC8A9D9727F4A8EB000048E3 /* HomeViewController.swift */,
 				DC8A9D9827F4A8EB000048E3 /* HomeViewController.xib */,
+				DC8A9DDF27FA6ACC000048E3 /* Custom CollectionView Layout */,
+				DC8A9DD827FA38E5000048E3 /* Photo Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -622,6 +637,7 @@
 			children = (
 				DC8A9DCD27F4B53E000048E3 /* PhotoData.swift */,
 				DC8A9DD227FA3335000048E3 /* PhotoDownloadLinks.swift */,
+				DC8A9DDD27FA6098000048E3 /* PhotoSponsorship.swift */,
 				DC8A9DD427FA334C000048E3 /* PhotoOwner.swift */,
 				DC8A9DD627FA336C000048E3 /* PhotoURLs.swift */,
 			);
@@ -636,6 +652,32 @@
 			path = Publisher;
 			sourceTree = "<group>";
 		};
+		DC8A9DD827FA38E5000048E3 /* Photo Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DD927FA39FD000048E3 /* PhotoCell.swift */,
+				DC8A9DDA27FA39FD000048E3 /* PhotoCell.xib */,
+			);
+			path = "Photo Cell";
+			sourceTree = "<group>";
+		};
+		DC8A9DDF27FA6ACC000048E3 /* Custom CollectionView Layout */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DE027FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift */,
+				DC8A9DE227FA6B0B000048E3 /* PhotosCollectionViewCustomLayout.swift */,
+			);
+			path = "Custom CollectionView Layout";
+			sourceTree = "<group>";
+		};
+		DC8A9DE427FA6BD9000048E3 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DE527FA6BE1000048E3 /* Collection+Helpers.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -648,6 +690,7 @@
 				DC5AFAF127F2373000C72869 /* Sources */,
 				DC5AFAF227F2373000C72869 /* Frameworks */,
 				DC5AFAF327F2373000C72869 /* Resources */,
+				CBBAA1789D3453557B31FD2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -700,6 +743,7 @@
 				DC8A9DC327F4B1F6000048E3 /* PhotoDetailsViewViewController.xib in Resources */,
 				DC5AFB0227F2373200C72869 /* Assets.xcassets in Resources */,
 				DC8A9D9A27F4A8EB000048E3 /* HomeViewController.xib in Resources */,
+				DC8A9DDC27FA39FD000048E3 /* PhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +770,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBBAA1789D3453557B31FD2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DC8A9D6727F4A19F000048E3 /* Run SwiftLint */ = {
@@ -761,10 +822,13 @@
 				DC5AFB4D27F27D6E00C72869 /* APIConstants.swift in Sources */,
 				DC8A9D8C27F4A78E000048E3 /* HomeViewModel.swift in Sources */,
 				DC5AFB3E27F27B2E00C72869 /* ViewModelState.swift in Sources */,
+				DC8A9DDE27FA6098000048E3 /* PhotoSponsorship.swift in Sources */,
 				DC8A9DD327FA3335000048E3 /* PhotoDownloadLinks.swift in Sources */,
 				DC5AFB3627F277ED00C72869 /* ErrorConstants.swift in Sources */,
 				DC5AFB4727F27C5400C72869 /* NetworkParameters.swift in Sources */,
 				DC5AFB5927F2813600C72869 /* Optional+Helpers.swift in Sources */,
+				DC8A9DDB27FA39FD000048E3 /* PhotoCell.swift in Sources */,
+				DC8A9DE127FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift in Sources */,
 				DC8A9D8727F4A78E000048E3 /* HomeRepository.swift in Sources */,
 				DC5AFB3227F2764200C72869 /* ErrorResolver.swift in Sources */,
 				DC8A9DCE27F4B53E000048E3 /* PhotoData.swift in Sources */,
@@ -787,6 +851,7 @@
 				DC8A9DBA27F4B1B3000048E3 /* PhotoDetailsViewModelContract.swift in Sources */,
 				DC5AFB4527F27C5400C72869 /* NetworkHeaders.swift in Sources */,
 				DC8A9DBD27F4B1B3000048E3 /* PhotoDetailsViewModel.swift in Sources */,
+				DC8A9DE627FA6BE1000048E3 /* Collection+Helpers.swift in Sources */,
 				DC5AFB1E27F2487900C72869 /* Dictionary+Helpers.swift in Sources */,
 				DC5AFB4427F27C5400C72869 /* NetworkMethods.swift in Sources */,
 				DC5AFB5127F27E9C00C72869 /* AlertAction.swift in Sources */,
@@ -797,6 +862,7 @@
 				DC8A9D9927F4A8EB000048E3 /* HomeViewController.swift in Sources */,
 				DC5AFB5427F27EEE00C72869 /* UIApplication+UIHelpers.swift in Sources */,
 				DC5AFB3927F27ADC00C72869 /* DisposeObject.swift in Sources */,
+				DC8A9DE327FA6B0B000048E3 /* PhotosCollectionViewCustomLayout.swift in Sources */,
 				DC8A9D8B27F4A78E000048E3 /* HomeServiceContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
