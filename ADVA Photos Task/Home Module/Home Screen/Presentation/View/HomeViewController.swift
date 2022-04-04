@@ -20,7 +20,9 @@ class HomeViewController: BaseViewController {
         return layout
     }()
     
-    private var viewModel = HomeViewModel()
+    private let viewModel = HomeViewModel()
+    
+    var coordinator: HomeCoordinatorProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,7 @@ private extension HomeViewController {
     func setupCollectionViewList() {
         photosListCollectionView.delegate = self
         photosListCollectionView.dataSource = self
-        photosListCollectionView.collectionViewLayout = photosListCustomCollectionViewLayout
+//        photosListCollectionView.collectionViewLayout = photosListCustomCollectionViewLayout
         photosListCollectionView.register(
             UINib(nibName: "PhotoCell", bundle: nil),
             forCellWithReuseIdentifier: "PhotoCell"
@@ -50,19 +52,13 @@ private extension HomeViewController {
         viewModel.$photosList.sink { [weak self] _ in
             DispatchQueue.main.async {
                 self?.photosListCollectionView.reloadData()
+                
             }
         }.store(in: &cancellables)
     }
     
     func setupNavigationBar() {
         navigationItem.title = "Featured"
-    }
-    
-    func navigateToPhotoDetailsScreen(using photoData: PhotoData) {
-        let viewController = PhotoDetailsViewViewController(photoData: photoData)
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .crossDissolve
-        navigationController?.present(viewController, animated: true, completion: nil)
     }
 }
 
@@ -91,7 +87,7 @@ extension HomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let photoData: PhotoData = viewModel.getPhotoData(for: indexPath) else { return }
-        navigateToPhotoDetailsScreen(using: photoData)
+        coordinator?.presentDetailsScreen(using: photoData)
     }
 }
 

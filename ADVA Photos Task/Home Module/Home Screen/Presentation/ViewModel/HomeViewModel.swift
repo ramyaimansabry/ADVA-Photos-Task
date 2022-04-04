@@ -11,15 +11,13 @@ import Foundation
 final class HomeViewModel: HomeViewModelContract {
     private let fetchPhotosUseCase: FetchPhotosListUseCaseContract
     private var pageIndex: Int = 1
-    private let pageSize: Int = 20
+    private let pageSize: Int = Constants.pageSize
     
     @Published var photosList: [PhotoData] = []
     
     init(fetchPhotosUseCase: FetchPhotosListUseCaseContract = FetchPhotosListUseCase()) {
         self.fetchPhotosUseCase = fetchPhotosUseCase
         super.init()
-        
-        self.loadPhotos()
     }
     
     // MARK: - Input Methods
@@ -35,16 +33,17 @@ final class HomeViewModel: HomeViewModelContract {
                 self.state = .failed(error)
             } receiveValue: { [weak self] photosListResponse in
                 guard let self = self else { return }
-                self.photosList.append(contentsOf: photosListResponse)
+                self.photosList += photosListResponse
                 self.state = .successful
+                print(self.photosList.count)
             }
             .store(in: &cancellables)
     }
     
     func loadMorePhotos() {
-        guard state != .loading else { return }
-        pageIndex += 1
-        loadPhotos()
+//        guard state != .loading else { return }
+//        pageIndex += 1
+//        loadPhotos()
     }
     
     // MARK: - Output Methods
