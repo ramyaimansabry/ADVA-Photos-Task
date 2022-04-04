@@ -15,12 +15,15 @@ final class HomeService: DisposeObject, HomeServiceContract {
         super.init()
     }
     
-    func fetchphotosList() -> AnyPublisher<[PhotoData], BaseError> {
+    func fetchphotosList(
+        with pageIndex: Int,
+        and pageSize: Int
+    ) -> AnyPublisher<[PhotoData], BaseError> {
         let request = APIBuilder()
-            .setPath(using: .fetchPhotosList, argument: "1")
+            .setPath(using: .fetchPhotosList, argument: ["\(pageIndex)", "\(pageSize)"])
             .setMethod(using: .get)
             .build()
-            
+        
         return apiService
             .request(
                 using: request,

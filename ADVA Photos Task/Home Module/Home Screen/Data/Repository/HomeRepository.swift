@@ -15,8 +15,11 @@ final class HomeRepository: DisposeObject, HomeRepositoryContract {
         super.init()
     }
     
-    func fetchPhotosList() -> AnyPublisher<[PhotoData], BaseError> {
-        return service.fetchphotosList()
+    func fetchPhotosList(
+        with pageIndex: Int,
+        and pageSize: Int
+    ) -> AnyPublisher<[PhotoData], BaseError> {
+        return service.fetchphotosList(with: pageIndex, and: pageSize)
             .eraseToBaseError()
             .eraseToAnyPublisher()
     }

@@ -9,14 +9,6 @@ import Foundation
 
 typealias PhotoDetailsViewModelContract = BaseViewModel & ObservableObject & PhotoDetailsViewModelInput & PhotoDetailsViewModelOutput
 
-/// This protocol is used if your ViewModel contains Inputs
-/// Otherwise you could remove it
-protocol PhotoDetailsViewModelInput {
-    // TODO: Add Related ViewModel Inputs
-}
+protocol PhotoDetailsViewModelInput {}
 
-/// This protocol is used if your ViewModel contains Outputs
-/// Otherwise you could remove it
-protocol PhotoDetailsViewModelOutput {
-    // TODO: Add Related ViewModel Outputs
-}
+protocol PhotoDetailsViewModelOutput {}

@@ -63,6 +63,8 @@
 		DC8A9DE127FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DE027FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift */; };
 		DC8A9DE327FA6B0B000048E3 /* PhotosCollectionViewCustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DE227FA6B0B000048E3 /* PhotosCollectionViewCustomLayout.swift */; };
 		DC8A9DE627FA6BE1000048E3 /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DE527FA6BE1000048E3 /* Collection+Helpers.swift */; };
+		DC8A9DE927FA8AC4000048E3 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DE827FA8AC4000048E3 /* CredentialManager.swift */; };
+		DC8A9DEC27FA93CF000048E3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9DEB27FA93CF000048E3 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +127,8 @@
 		DC8A9DE027FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCustomLayoutDelegate.swift; sourceTree = "<group>"; };
 		DC8A9DE227FA6B0B000048E3 /* PhotosCollectionViewCustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCustomLayout.swift; sourceTree = "<group>"; };
 		DC8A9DE527FA6BE1000048E3 /* Collection+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Helpers.swift"; sourceTree = "<group>"; };
+		DC8A9DE827FA8AC4000048E3 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
+		DC8A9DEB27FA93CF000048E3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F6570ECC2B492219FFAD1006 /* Pods-ADVA Photos Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADVA Photos Task.release.xcconfig"; path = "Target Support Files/Pods-ADVA Photos Task/Pods-ADVA Photos Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +253,7 @@
 		DC5AFB1627F2422A00C72869 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9DE727FA8A99000048E3 /* Credentials */,
 				DC5AFB2727F2727200C72869 /* Error */,
 				DC5AFB1727F2423400C72869 /* Environment */,
 			);
@@ -295,6 +300,7 @@
 		DC5AFB2327F2720C00C72869 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
+				DC8A9DEA27FA93B8000048E3 /* ViewController */,
 				DC5AFB3A27F27B0500C72869 /* ViewModel */,
 				DC5AFB3727F27AD200C72869 /* Dispose */,
 			);
@@ -678,6 +684,22 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
+		DC8A9DE727FA8A99000048E3 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DE827FA8AC4000048E3 /* CredentialManager.swift */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		DC8A9DEA27FA93B8000048E3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A9DEB27FA93CF000048E3 /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -827,6 +849,7 @@
 				DC5AFB3627F277ED00C72869 /* ErrorConstants.swift in Sources */,
 				DC5AFB4727F27C5400C72869 /* NetworkParameters.swift in Sources */,
 				DC5AFB5927F2813600C72869 /* Optional+Helpers.swift in Sources */,
+				DC8A9DEC27FA93CF000048E3 /* BaseViewController.swift in Sources */,
 				DC8A9DDB27FA39FD000048E3 /* PhotoCell.swift in Sources */,
 				DC8A9DE127FA6AF5000048E3 /* CollectionViewCustomLayoutDelegate.swift in Sources */,
 				DC8A9D8727F4A78E000048E3 /* HomeRepository.swift in Sources */,
@@ -837,6 +860,7 @@
 				DC5AFB3C27F27B0E00C72869 /* BaseViewModel.swift in Sources */,
 				DC5AFB1527F23DDA00C72869 /* NetworkConstants.swift in Sources */,
 				DC8A9D8A27F4A78E000048E3 /* HomeRepositoryContract.swift in Sources */,
+				DC8A9DE927FA8AC4000048E3 /* CredentialManager.swift in Sources */,
 				DC5AFB1227F23CFC00C72869 /* APIServiceContract.swift in Sources */,
 				DC8A9DD527FA334C000048E3 /* PhotoOwner.swift in Sources */,
 				DC8A9DC227F4B1F6000048E3 /* PhotoDetailsViewViewController.swift in Sources */,

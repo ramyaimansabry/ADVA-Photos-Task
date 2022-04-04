@@ -9,14 +9,12 @@ import Foundation
 
 typealias HomeViewModelContract = BaseViewModel & ObservableObject & HomeViewModelInput & HomeViewModelOutput
 
-/// This protocol is used if your ViewModel contains Inputs
-/// Otherwise you could remove it
 protocol HomeViewModelInput {
-    // TODO: Add Related ViewModel Inputs
+    func loadPhotos()
+    func loadMorePhotos()
 }
 
-/// This protocol is used if your ViewModel contains Outputs
-/// Otherwise you could remove it
 protocol HomeViewModelOutput {
-    // TODO: Add Related ViewModel Outputs
+    func getPhotoData(for indexPath: IndexPath) -> PhotoData?
+    func getPhotoSize(for indexPath: IndexPath) -> (Float, Float)
 }

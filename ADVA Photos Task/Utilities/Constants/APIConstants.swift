@@ -8,5 +8,5 @@
 import Foundation
 
 enum APIConstants: String, CaseIterable {
-    case fetchPhotosList = "/photos?page=%@&client_id=R7s7Bf46y11kk8i2dQX8YlH6w0cz20iuyLNXfvMd4bo"
+    case fetchPhotosList = "/photos?page=%@&&per_page=%@"
 }

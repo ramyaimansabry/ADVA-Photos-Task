@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     @IBOutlet weak var photosListCollectionView: UICollectionView!
     
@@ -25,12 +25,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupCollectionViewList()
         subscribeForPhotosListChanges()
         viewModel.loadPhotos()
     }
-    
-
 }
 
 private extension HomeViewController {
@@ -47,9 +46,15 @@ private extension HomeViewController {
     }
     
     func subscribeForPhotosListChanges() {
-        _ = viewModel.photosList.publisher.sink { [weak self] _ in
-            self?.photosListCollectionView.reloadData()
-        }
+        viewModel.$photosList.sink { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.photosListCollectionView.reloadData()
+            }
+        }.store(in: &cancellables)
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.title = "Featured"
     }
 }
 
@@ -65,7 +70,13 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {}
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.photosList.count - 5 {
+            viewModel.loadMorePhotos()
+        }
+    }
+}
 
 extension HomeViewController: CollectionViewCustomLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, sizeOfItemAtIndexPath indexPath: IndexPath) -> CGSize {

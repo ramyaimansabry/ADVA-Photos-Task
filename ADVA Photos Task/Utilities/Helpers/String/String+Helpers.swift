@@ -9,6 +9,14 @@ import UIKit
 
 // MARK: - Variables
 extension String {
+    var localized: String {
+        NSLocalizedString(
+            self,
+            value: self,
+            comment: ""
+        )
+    }
+    
     var optional: String? {
         return self.isEmpty ? nil : self
     }
@@ -77,6 +85,10 @@ extension String {
 
 // MARK: - Functions
 extension String {
+    func localizedFormat(using arguments: [CVarArg]) -> String {
+        return String(format: self.localized, arguments: arguments)
+    }
+    
     /// Method to replace string's sequence with Strings
     /// - Returns: String after replacing sequence
     func replace(_ sequence: String = "##", with: Any) -> String {

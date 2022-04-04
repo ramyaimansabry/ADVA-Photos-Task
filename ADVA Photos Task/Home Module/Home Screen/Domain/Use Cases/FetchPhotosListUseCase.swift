@@ -15,7 +15,10 @@ final class FetchPhotosListUseCase: DisposeObject, FetchPhotosListUseCaseContrac
         super.init()
     }
     
-    func execute() -> AnyPublisher<[PhotoData], BaseError> {
-        repository.fetchPhotosList()
+    func execute(
+        with pageIndex: Int,
+        and pageSize: Int
+    ) -> AnyPublisher<[PhotoData], BaseError> {
+        repository.fetchPhotosList(with: pageIndex, and: pageSize)
     }
 }

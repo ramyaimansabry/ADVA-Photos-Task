@@ -106,4 +106,3 @@ class PhotosCollectionViewCustomLayout: UICollectionViewLayout {
         return cache[indexPath.item]
     }
 }
-

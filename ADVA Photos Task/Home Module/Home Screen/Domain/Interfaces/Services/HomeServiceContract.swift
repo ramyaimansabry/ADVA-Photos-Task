@@ -8,5 +8,8 @@
 import Combine
 
 protocol HomeServiceContract {
-    func fetchphotosList() -> AnyPublisher<[PhotoData], BaseError>
+    func fetchphotosList(
+        with pageIndex: Int,
+        and pageSize: Int
+    ) -> AnyPublisher<[PhotoData], BaseError>
 }

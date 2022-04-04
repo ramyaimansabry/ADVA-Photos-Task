@@ -9,6 +9,10 @@ import Foundation
 
 class APIBuilder {
     private(set) var urlRequest: URLRequest
+    
+    private var clientID: String {
+        return  CredentialManager.shared.clientID
+    }
    
     init() {
         guard let url = URL(string: NetworkConstants.baseUrl) else {
@@ -87,19 +91,17 @@ class APIBuilder {
 //    }
   
     func build() -> URLRequest {
-        guard let url = self.urlRequest.url, !url.pathComponents.isEmpty else {
+        guard
+            let url = self.urlRequest.url,
+            !url.pathComponents.isEmpty
+        else {
             fatalError("API should contain at least one path.")
         }
         
+        let absoluteURLString: String = url.absoluteString + "&client_id=\(clientID)"
+        self.urlRequest.url = URL(string: absoluteURLString)
+                
         self.urlRequest.setValue(ContentType.json, forHTTPHeaderField: HTTPHeader.contentType)
-        
-        let uuid = UUID().uuidString
-        self.urlRequest.setValue(uuid, forHTTPHeaderField: HTTPHeader.correlationId)
-        self.urlRequest.setValue(uuid, forHTTPHeaderField: HTTPHeader.spanId)
-        
-//        if let bearer = token {
-//            self.urlRequest.setValue("Bearer \(bearer)", forHTTPHeaderField: HTTPHeader.authentication)
-//        }
         
         return self.urlRequest
     }
@@ -111,20 +113,5 @@ private extension APIBuilder {
         let baseAppend = base?.appendingPathComponent(path).absoluteString.removingPercentEncoding
         guard let baseAppend = baseAppend, let newURL = URL(string: baseAppend) else { return }
         self.urlRequest.url = newURL
-    }
-}
-
-extension String {
-    var localized: String {
-        // swiftlint:disable nslocalizedstring_key
-        NSLocalizedString(
-            self,
-            value: self,
-            comment: ""
-        )
-    }
-    
-    func localizedFormat(using arguments: [CVarArg]) -> String {
-        return String(format: self.localized, arguments: arguments)
     }
 }

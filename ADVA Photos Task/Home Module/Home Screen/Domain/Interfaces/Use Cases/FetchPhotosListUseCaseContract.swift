@@ -8,5 +8,8 @@
 import Combine
 
 protocol FetchPhotosListUseCaseContract {
-    func execute() -> AnyPublisher<[PhotoData], BaseError>
+    func execute(
+        with pageIndex: Int,
+        and pageSize: Int
+    ) -> AnyPublisher<[PhotoData], BaseError>
 }

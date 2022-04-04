@@ -10,6 +10,8 @@ import Foundation
 
 final class HomeViewModel: HomeViewModelContract {
     private let fetchPhotosUseCase: FetchPhotosListUseCaseContract
+    private var pageIndex: Int = 1
+    private let pageSize: Int = 20
     
     @Published var photosList: [PhotoData] = []
     
@@ -22,8 +24,10 @@ final class HomeViewModel: HomeViewModelContract {
     
     // MARK: - Input Methods
     func loadPhotos() {
+        state = .loading
+        
         fetchPhotosUseCase
-            .execute()
+            .execute(with: pageIndex, and: pageSize)
             .receive(on: RunLoop.main)
             .sink { [weak self] completion in
                 guard let self = self else { return }
@@ -35,7 +39,12 @@ final class HomeViewModel: HomeViewModelContract {
                 self.state = .successful
             }
             .store(in: &cancellables)
-
+    }
+    
+    func loadMorePhotos() {
+        guard state != .loading else { return }
+        pageIndex += 1
+        loadPhotos()
     }
     
     // MARK: - Output Methods
