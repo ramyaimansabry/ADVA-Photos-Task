@@ -40,8 +40,8 @@ class PhotosCollectionViewCustomLayout: UICollectionViewLayout {
     }
     
     override func prepare() {
-        guard cache.isEmpty, let collectionView = collectionView, let delegate = delegate else { return }
-        
+        guard let collectionView = collectionView, let delegate = delegate else { return }
+                
         let columWidth = contentWidth / CGFloat(numberOfColums)
         var xOffset = [CGFloat]()
         for colum in 0..<numberOfColums {

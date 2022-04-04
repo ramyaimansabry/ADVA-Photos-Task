@@ -39,7 +39,7 @@ private extension HomeViewController {
     func setupCollectionViewList() {
         photosListCollectionView.delegate = self
         photosListCollectionView.dataSource = self
-//        photosListCollectionView.collectionViewLayout = photosListCustomCollectionViewLayout
+        photosListCollectionView.collectionViewLayout = photosListCustomCollectionViewLayout
         photosListCollectionView.registerCellNib(PhotoCell.self)
         photosListCollectionView.showsVerticalScrollIndicator = false
         photosListCollectionView.showsHorizontalScrollIndicator = false

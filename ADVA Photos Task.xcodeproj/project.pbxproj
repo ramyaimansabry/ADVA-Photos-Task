@@ -540,8 +540,8 @@
 			isa = PBXGroup;
 			children = (
 				DC8A9D8127F4A78E000048E3 /* ViewModel */,
-				DC8A9D8527F4A78E000048E3 /* View */,
 				DCA8B19D27FB23460019C540 /* Navigation */,
+				DC8A9D8527F4A78E000048E3 /* View */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
